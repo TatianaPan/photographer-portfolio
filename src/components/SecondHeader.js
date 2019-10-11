@@ -23,15 +23,21 @@ const Logo = styled.div`
     letter-spacing: .14em;
     text-transform: none;
     color: #1f1f2e;
+    @media(max-width: 600px) {
+        display: none;
+    }
 `;
 
 const Nav = styled.ul`
-    float: left;
+    float: right;
     display: flex;
     justify-content: flex-end;
     width: 50%;
     margin: 0;
     padding-left: 0;
+    @media(max-width: 600px) {
+        width: 100%;
+    }
 `;
 
 const NavItem = styled.li`

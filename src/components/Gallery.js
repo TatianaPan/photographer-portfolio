@@ -41,7 +41,14 @@ const Container = styled.div`
      img {
         width: 33%;
         padding: .5em;
+        @media(max-width: 800px) {
+            width: 50%;
+        }
+        @media(max-width: 450px) {
+            width: 100%;
+        }
     }
+    
 `;
 
 const TextContainer = styled.div`
@@ -72,8 +79,9 @@ const ParallaxDiv = styled.div`
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    .family {
-        background-image: url(${parallax2});
+    @media(max-width: 800px) {
+        background-attachment: scroll !important;
+        width: 100%;
     }
 `;
 
@@ -86,6 +94,10 @@ const ParallaxDiv2 = styled.div`
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    @media(max-width: 800px) {
+        background-attachment: scroll !important;
+        width: 100%;
+    }
 `;
 const ParallaxDiv3 = styled.div`
     background-image: url(${parallax3});
@@ -95,7 +107,11 @@ const ParallaxDiv3 = styled.div`
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover;@media(max-width: 800px) {
+        background-attachment: scroll !important;
+        width: 100%;
+    }
+
 `;
 
 const ParallaxDiv4 = styled.div`
@@ -107,9 +123,11 @@ const ParallaxDiv4 = styled.div`
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    .family {
-        background-image: url(${parallax2});
+    @media(max-width: 800px) {
+        background-attachment: scroll !important;
+        width: 100%;
     }
+  
 `;
 
 const TextOnParallax = styled.div`
@@ -126,6 +144,11 @@ const TextOnParallax = styled.div`
     letter-spacing: 0px;
     font-weight: 700;
     font-style: normal;
+    @media (max-width: 800px) {
+        font-size: 60px;
+    
+        font-weight: 500;
+    }
 `;
 
 
