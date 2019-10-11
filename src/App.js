@@ -6,7 +6,8 @@ import Header from './components/Header';
 import './App.css';
 
 const StyledApp = styled.div`
-    background-image: url(${matterhorn});
+    /* background-image: url(${matterhorn}); */
+    background-image: url('https://i.ibb.co/r54XxF3/matterhorn.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -19,7 +20,7 @@ const StyledApp = styled.div`
 
 const TitleSection = styled.div`
   text-align: center;
-  color: whitesmoke;
+  color: white;
   display: flex;
   flex-direction: column;
     justify-content: center;

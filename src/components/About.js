@@ -8,7 +8,6 @@ import Footer from './Footer';
 const TextContainer = styled.div`
     width: 100%; 
     padding: 2em;
-    
     p {
         width: 40%;
         margin-top: 1em;
@@ -22,6 +21,10 @@ const TextContainer = styled.div`
         font-weight: 600;
         text-decoration: none;
         color: #333;
+        @media(max-width: 550px) {
+            font-size: 20px;
+            width: 60%;
+        }
     }
 `; 
 
@@ -34,12 +37,21 @@ const AboutText = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    @media(max-width: 550px) {
+        padding: 0;
+    }
     h2 {
         width: 120%;
         font-weight: 600;
         margin-left: -20%;
         background-color: #f0f0f5;
         padding: 1em;
+        @media(max-width: 550px) {
+            width: 100%;
+            margin-left: 0;
+            text-align: center;
+            font-size: 18px;
+        }
     }
     div {
         color: #a6a6a6;

@@ -15,7 +15,13 @@ const Container = styled.div`
         width: 60%;
         margin-left: auto;
         margin-right: auto;
+        @media(max-width: 550px) {
+            margin-bottom: 1em;
+            margin-top: 0;
+            padding-top: 0;
+        }   
     }
+    
 `;
 
 const TextContainer = styled.div`
