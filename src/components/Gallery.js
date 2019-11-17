@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import SecondHeader from './SecondHeader';
+import Headroom from 'react-headroom';
 import portrait1 from '../assets/portraits/p1.jpg';
 import portrait2 from '../assets/portraits/p2.jpg';
 import portrait3 from '../assets/portraits/p3.jpg';
@@ -38,14 +39,21 @@ const Container = styled.div`
     padding: 3em;
     max-width: 1200px;
     margin: 0 auto;
-     img {
-        width: 33%;
+     div {
+        max-width: 33%;
+        height: auto;
         padding: .5em;
+        img {
+            max-width: 100%;
+            /* display: block; */
+            height: auto;
+        }
         @media(max-width: 800px) {
-            width: 50%;
+            max-width: 50%;
         }
         @media(max-width: 450px) {
-            width: 100%;
+            max-width: 100%;
+            margin: 3% auto;
         }
     }
     
@@ -81,7 +89,7 @@ const ParallaxDiv = styled.div`
     background-size: cover;
     @media(max-width: 800px) {
         background-attachment: scroll !important;
-        width: 100%;
+        max-width: 100%;
     }
 `;
 
@@ -156,66 +164,69 @@ class Gallery extends Component {
     render() {
         return (
             <div>
-                <SecondHeader />
-               
+                <Headroom>
+                    <SecondHeader />
+                </Headroom>
+
                 <ParallaxDiv>
                     <TextOnParallax>Portraits</TextOnParallax>
                 </ParallaxDiv>
+                <TextContainer></TextContainer>
                 <Container>
-                    <img src={portrait1} alt="photography1" />
-                    <img src={portrait2} alt="photography1" />
-                    <img src={portrait3} alt="photography1" />
-                    <img src={portrait4} alt="photography1" />
-                    <img src={portrait5} alt="photography1" />
-                    <img src={portrait6} alt="photography1" />
+                    <div id='img-container'><img src={portrait1} alt="photography1" /></div>
+                    <div id='img-container'><img src={portrait2} alt="photography1" /></div>
+                    <div id='img-container'><img src={portrait3} alt="photography1" /></div>
+                    <div id='img-container'><img src={portrait4} alt="photography1" /></div>
+                    <div id='img-container'><img src={portrait5} alt="photography1" /></div>
+                    <div id='img-container'><img src={portrait6} alt="photography1" /></div>
                 </Container>
                 <TextContainer>
-                    <p>I do lifestyle portraits, family and children photo shoots. I also take pictures of events. 
+                    <p>I do lifestyle portraits, family and children photo shoots. I also take pictures of events.
                         As a hobby, I do lanscape photography</p>
                 </TextContainer>
                 <ParallaxDiv2 className='family'>
                     <TextOnParallax>Family</TextOnParallax>
                 </ParallaxDiv2>
                 <TextContainer>
-                <p> I love capturing natural emotions and joyful moments. </p>
+                    <p> I love capturing natural emotions and joyful moments. </p>
                 </TextContainer>
                 <Container>
-                <img src={family1} alt="photography1" />
-                    <img src={family2} alt="photography1" />
-                    <img src={family3} alt="photography1" />
-                    <img src={family4} alt="photography1" />
-                    <img src={family5} alt="photography1" />
-                    <img src={family6} alt="photography1" />
+                    <div><img src={family1} alt="photography1" /></div>
+                    <div><img src={family2} alt="photography1" /></div>
+                    <div><img src={family3} alt="photography1" /></div>
+                    <div><img src={family4} alt="photography1" /></div>
+                    <div><img src={family5} alt="photography1" /></div>
+                    <div><img src={family6} alt="photography1" /></div>
                 </Container>
                 <TextContainer>
-                <p>  I will catch the sweetest memories for your family album.</p>
+                    <p>  I will catch the sweetest memories for your family album.</p>
                 </TextContainer>
                 <ParallaxDiv3>
                     <TextOnParallax>Children</TextOnParallax>
                 </ParallaxDiv3>
                 <Container>
-                    <img src={child1} alt="photography1" />
-                    <img src={child2} alt="photography1" />
-                    <img src={child3} alt="photography1" />
-                    <img src={child4} alt="photography1" />
-                    <img src={child5} alt="photography1" />
-                    <img src={child6} alt="photography1" />
+                    <div><img src={child1} alt="photography1" /></div>
+                    <div><img src={child2} alt="photography1" /></div>
+                    <div><img src={child3} alt="photography1" /></div>
+                    <div><img src={child4} alt="photography1" /></div>
+                    <div><img src={child5} alt="photography1" /></div>
+                    <div><img src={child6} alt="photography1" /></div>
                 </Container>
                 <TextContainer>
-                <p> </p>
+                    <p> </p>
                 </TextContainer>
                 <ParallaxDiv4>
                     <TextOnParallax>Landscape</TextOnParallax>
                 </ParallaxDiv4>
                 <Container>
-                    <img src={land1} alt="photography1" />
-                    <img src={land2} alt="photography1" />
-                    <img src={land3} alt="photography1" />
-                    <img src={land4} alt="photography1" />
-                    <img src={land5} alt="photography1" />
-                    <img src={land6} alt="photography1" />
+                    <div><img src={land1} alt="photography1" /></div>
+                    <div><img src={land2} alt="photography1" /></div>
+                    <div><img src={land3} alt="photography1" /></div>
+                    <div><img src={land4} alt="photography1" /></div>
+                    <div><img src={land5} alt="photography1" /></div>
+                    <div><img src={land6} alt="photography1" /></div>
                 </Container>
-               <Footer />
+                <Footer />
             </div>
         )
     }

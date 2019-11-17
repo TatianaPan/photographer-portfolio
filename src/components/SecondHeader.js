@@ -7,8 +7,9 @@ import "../App.css";
 const StyledHeader = styled.div`
     display: flex;
     width: 100%;
-    background-color: transparent;
+    background-color: white;
     padding: .5rem 1rem;
+    
 `;
 
 const Logo = styled.div`

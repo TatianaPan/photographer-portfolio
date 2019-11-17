@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import SecondHeader from './SecondHeader';
+import Headroom from 'react-headroom';
 import styled from 'styled-components';
 import tanya from '../assets/Tatiana.jpg';
 import Footer from './Footer';
@@ -29,6 +30,7 @@ const TextContainer = styled.div`
 `; 
 
 const AboutText = styled.div`
+    max-width: 50%;
     padding-left: 2em;
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
@@ -53,8 +55,9 @@ const AboutText = styled.div`
             font-size: 18px;
         }
     }
-    div {
+    #description {
         color: #a6a6a6;
+        max-width: 100%;
         line-height: 1.8em;
         font-size: 18px;
     }
@@ -63,36 +66,44 @@ const AboutText = styled.div`
 const AboutMe = styled.div`
     padding: 2em;
     display: flex;
-    max-width: 1200px;
+    /* max-width: 1200px; */
     margin: 0 auto;
     @media (max-width: 550px) {
         flex-direction: column;
     }
-    img {
-        width: 50%;
+    div {
+        max-width: 50%;
         @media (max-width: 550px) {
-            width: 100%;
+                max-width: 100%;
+            }
+        img {
+            max-width: 100%;
+            height: auto;
+            
         }
     }
+    
 `;
 
 class About extends Component {
     render() {
         return (
             <div>
-                <SecondHeader />
+                <Headroom>
+                    <SecondHeader />
+                </Headroom>
                 <TextContainer>
-                    <p>Passionate about photography, hiking and web debelopment.</p>
+                    <p>Passionate about photography, hiking and web development.</p>
                 </TextContainer>  
                 <AboutMe>
-                    <img src={tanya} alt='photographer'/>
+                    <div><img src={tanya} alt='photographer'/></div>
                     <AboutText>
                         <h2>Hi, I'm Tatiana. Nice to meet you!</h2>
-                        <div>
+                        <div id='description'>
                             <p>I am Zurich-based photographer, specializing in family, kids and woman portrait's photoshoots. 
-                            Love to capture true moments of life. I will catch the sweetest memories for your family photoalbum.</p>
-                            I am Zurich-based photographer, specializing in family, kids and woman portrait's photoshoots. 
-                            <p>Love to capture true moments of life. I will catch the sweetest memories for your family photoalbum.</p>
+                            Love to capture natural moments of life and true emotions. I will catch the sweetest memories for your family album.</p>
+                             
+                            <p></p>
                             <p>I have recently switched to IT and yes, this web page I have made by myself ;)</p>
                         </div>
                     </AboutText>
